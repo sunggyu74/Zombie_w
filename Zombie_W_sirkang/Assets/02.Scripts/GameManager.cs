@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     // 점수를 추가하고 UI 갱신
     public void AddScore(int newScore){
         // 게임오버가 아닌 상태에서만 점수 추가 가능
-        if (isGameover){
+        if (!isGameover){
             // 점수 추가
             score += newScore;
             // 점수 UI 텏스트 갱신

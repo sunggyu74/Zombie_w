@@ -16,17 +16,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: zombie_diffuse
-    second: {fileID: 2800000, guid: 2708ca515a45dd44a9af55c1d4bd6b26, type: 3}
+    second: {fileID: 2800000, guid: 38255bf9f4955d645ace37e7697ad9d2, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: zombie_normal
-    second: {fileID: 2800000, guid: 55e0f500c26a6af4687e8fdf64b95ef6, type: 3}
+    second: {fileID: 2800000, guid: 2d64c04f3ad47b243a79d2e55ff9b131, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: zombie_specular
-    second: {fileID: 2800000, guid: afbc74175348cbd4fa9674143e7c9d29, type: 3}
+    second: {fileID: 2800000, guid: 9e310cc95d02dad42955cc2d6514e1f2, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
