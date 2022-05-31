@@ -101,7 +101,8 @@ public class Gun : MonoBehaviour
         {
             // 레이가 다른 물체와 충돌하지 않았다면
             // 탄알이 최대 사정거리까지 날아갔을 때의 위치를 충돌위치로 사용
-            hitPosition = fireTransform.position + fireTransform.forward * fireDistance;
+            hitPosition = fireTransform.position + 
+                fireTransform.forward * fireDistance;
         }
 
         // 발사 이팩트 재생 시작
@@ -141,7 +142,8 @@ public class Gun : MonoBehaviour
 
     public bool Reload() // 재장전 시도
     {
-        if(state == State.Reloading || ammoRemain <= 0 || magAmmo >= gunData.magCapacity)
+        if(state == State.Reloading || ammoRemain <= 0 ||
+            magAmmo >= gunData.magCapacity)
         {
             // 이미 재장전 중이거나 남은 탄알이 없거나
             // 탄창에 탄알이 이미 가득한 경우 재장전할 수 없음
