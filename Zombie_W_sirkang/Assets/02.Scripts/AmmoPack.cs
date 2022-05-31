@@ -1,5 +1,5 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // 탄알을 충전하는 아이템
@@ -19,15 +19,8 @@ public class AmmoPack : MonoBehaviour, IItem
 
         }
 
-        // target에 탄알을 추가하는 처리
-        Debug.Log("탄알이 증가했다 : " + ammo);
-
         // 사용되었으므로 자신을 파괴
         Destroy(gameObject);
     }
 
-    /* private void Start()
-    {
-        Use(gameObject);
-    } */
 }

@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // 플레이어 캐릭터의 사망 이벤트 발생시 게임오버
         FindObjectOfType<PlayerHealth>().onDeath += EndGame;

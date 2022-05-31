@@ -52,8 +52,8 @@ public class ItemSpawner : MonoBehaviour
         // 바닥에서 0.5만큼 위로 올리기
         spawnPosition += Vector3.up*0.5f;
 
-        //아이템 중 하나를 무작위로 골라 랜덤 위치에 생성
-        GameObject selectedItem = items[Random.Range(0, items.Length)]        ;
+        //아이템 중 하나를 무작위로 골라 랜덤 위치에 생성, Quarternion.identity 회전값 (0,0,0)
+        GameObject selectedItem = items[Random.Range(0, items.Length)];
         GameObject item = Instantiate(selectedItem, spawnPosition, Quaternion.identity);
 
         // 생성된 아이템을 5초 뒤에 파괴

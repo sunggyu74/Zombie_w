@@ -6,12 +6,6 @@ public class Rotator : MonoBehaviour
 {
     public float rotationSpeed = 60f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

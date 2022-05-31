@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4533837315676430}
   - component: {fileID: 135053304893941300}
   - component: {fileID: 108646884597796964}
-  - component: {fileID: 114923613129635330}
-  - component: {fileID: 114448886708327992}
+  - component: {fileID: 8912566827033797299}
+  - component: {fileID: 1521548495221882029}
   m_Layer: 0
   m_Name: AmmoPack
   m_TagString: Untagged
@@ -110,7 +110,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114923613129635330
+--- !u!114 &8912566827033797299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 60
---- !u!114 &114448886708327992
+--- !u!114 &1521548495221882029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

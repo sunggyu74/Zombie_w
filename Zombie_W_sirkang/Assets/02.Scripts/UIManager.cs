@@ -32,11 +32,10 @@ public class UIManager : MonoBehaviour
     public GameObject gameoverUI; // 게임오버 시 활성화할 UI
 
     // 탄알 텍스트 갱신
-    public void UpdateAmmoText(int magAmmo, int ammoRemain){
-        ammoText.text = magAmmo + "/" + ammoRemain;
-
+    public void UpdateAmmoText(int magAmmo, int remainAmmo){
+        ammoText.text = magAmmo + "/" + remainAmmo;
     }
-
+  
     // 점수 텍스트 갱신
     public void updateScoreText(int newScore){
         scoreText.text = "Score :" + newScore;
@@ -45,7 +44,7 @@ public class UIManager : MonoBehaviour
 
     // 적 웨이브 텍스트 갱신
     public void updateWaveText(int waves, int count){
-        waveText.text = "Wave :" + waves + "|nEnemy Left :" + count;
+        waveText.text = "Wave :" + waves + "\nEnemy Left :" + count;
 
     }
 

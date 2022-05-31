@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class HealthPack : MonoBehaviour, IItem
 {
@@ -20,20 +18,9 @@ public class HealthPack : MonoBehaviour, IItem
 
         }
 
-        // target의 체력을 회복하는 처리
-        Debug.Log("체력을 회복했다 : " + health);
-
         // 사용되었으므로 자신을 파괴
         Destroy(gameObject);
 
     }
 
-    // Start is called before the first frame update
-    /* void Start()
-    {
-        Use(gameObject);
-    } */
-
-    // Update is called once per frame
-    
 }
