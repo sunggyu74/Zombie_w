@@ -23,7 +23,8 @@ public class ZombieSpawner : MonoBehaviour
 
         }
 
-        if (zombies.Count <= 0)
+        // 좀비를 모두 물리친 경우 다음 스폰 실행
+        if (zombies.Count <= 0) // List의 크기 Count
         {
             SpawnWave();
 
@@ -49,7 +50,7 @@ public class ZombieSpawner : MonoBehaviour
         wave++;
 
         // 현재 웨이브 *1.5를 반올림한 수만큼 좀비 생성
-        int spawnCount = Mathf.RoundToInt(wave * 1.5f);
+        int spawnCount = Mathf.RoundToInt(wave * 1.5f); // C# Math , using System; 또는 System.Math
 
         // spawnCount만큼 좀비 생성
         for (int i = 0; i < spawnCount; i++)
@@ -89,6 +90,6 @@ public class ZombieSpawner : MonoBehaviour
         // 좀비 사망시 점수 상승
         zombie.onDeath += () => GameManager.instance.AddScore(100);
 
-    }
+    } // for 문 반복 후 update 이동
 
 }

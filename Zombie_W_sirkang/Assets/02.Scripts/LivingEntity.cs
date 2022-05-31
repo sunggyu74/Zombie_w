@@ -3,6 +3,7 @@
 using System;
 using UnityEngine;
 
+
 // 생명체로 동작할 게임 오브젝트들을 위한 뼈대를 제공
 // 체력, 대미지 받아들이기, 사망 가능, 사망 이벤트를 제공
 public class LivingEntity : MonoBehaviour, IDamageable{
@@ -40,7 +41,7 @@ public class LivingEntity : MonoBehaviour, IDamageable{
 
         // 체력 추가
         health += newHealth;
-
+      
     }
 
     // 사망 처리
