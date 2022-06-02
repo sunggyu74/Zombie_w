@@ -27,8 +27,8 @@ public class Gun : MonoBehaviour
 
     private float fireDistance = 50; // 사정거리
 
-    public int ammoRemain = 100; // 남은 전체 탄알
-    public int magAmmo; // 현재 탄창에 남아 있는 탄알
+    public int __Remain = 100; // 남은 전체 탄알
+    public int _Ammo; // 현재 탄창에 남아 있는 탄알
 
     private float lastFireTime; // 총을 마지막으로 발사한 시점
 
@@ -48,9 +48,9 @@ public class Gun : MonoBehaviour
     {
         // 총 상태 초기화
         // 전체 예비 탄알 양을 초기화
-        ammoRemain = gunData.startAmmoRemain;
+        __Remain = gunData.startAmmoRemain;
         // 현재 탄창을 가득 채우기
-        magAmmo = gunData.magCapacity;
+        _Ammo = gunData.magCapacity;
 
         // 총의 현재 상태를 총을 쏠 준비가 된 상태로 변경
         state = State.Ready;
@@ -109,8 +109,8 @@ public class Gun : MonoBehaviour
         StartCoroutine(shotEffect(hitPosition));
 
         // 남은 탄알 수를 -1
-        magAmmo--;
-        if(magAmmo <= 0)
+        _Ammo--;
+        if(_Ammo <= 0)
         {
             // 탄창에 남은 탄알이 없다면 총의 현재 상태를 Empty로 갱신
             state = State.Empty;
@@ -142,8 +142,8 @@ public class Gun : MonoBehaviour
 
     public bool Reload() // 재장전 시도
     {
-        if(state == State.Reloading || ammoRemain <= 0 ||
-            magAmmo >= gunData.magCapacity)
+        if(state == State.Reloading || __Remain <= 0 ||
+            _Ammo >= gunData.magCapacity)
         {
             // 이미 재장전 중이거나 남은 탄알이 없거나
             // 탄창에 탄알이 이미 가득한 경우 재장전할 수 없음
@@ -166,19 +166,19 @@ public class Gun : MonoBehaviour
         yield return new WaitForSeconds(gunData.reloadTime);
 
         // 탄창에 채울 탄알 계산
-        int ammoToFill = gunData.magCapacity - magAmmo;
+        int ammoToFill = gunData.magCapacity - _Ammo;
 
         // 탄창에 채워야 할 탄알이 남은 탄알보다 많다면
         // 채워야 할 탄알 수를 남은 탄알 수에 맞춰 줄임
-        if(ammoRemain < ammoToFill)
+        if(__Remain < ammoToFill)
         {
-            ammoToFill = ammoRemain;
+            ammoToFill = __Remain;
         }
 
         // 탄창을 채움
-        magAmmo += ammoToFill;
+        _Ammo += ammoToFill;
         // 남은 탄알에서 탄창에 채운만큼 탄알을 뺌
-        ammoRemain -= ammoToFill;
+        __Remain -= ammoToFill;
 
         // 총의 현재 상태를 발사 준비된 상태로 변경
         state = State.Ready;

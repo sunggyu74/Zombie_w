@@ -9,7 +9,7 @@ using UnityEngine.UI; // UI 관련 코드
 public class UIManager : MonoBehaviour
 {
 
-
+    // 싱글턴 접근용 프로퍼티
     public static UIManager instance{
         get
         {
@@ -26,14 +26,14 @@ public class UIManager : MonoBehaviour
 
     private static UIManager m_instance; // 싱글턴이 할당될 변수
 
-    public Text ammoText; // 탄알 표시용 텍스트
+    public Text ammo; // 탄알 표시용 텍스트
     public Text scoreText; // 점수 표시용 텍스트
     public Text waveText; // 적 웨이브 표시용 텍스트
     public GameObject gameoverUI; // 게임오버 시 활성화할 UI
 
     // 탄알 텍스트 갱신
-    public void UpdateAmmoText(int magAmmo, int remainAmmo){
-        ammoText.text = magAmmo + "/" + remainAmmo;
+    public void UpdateAmmoText(int _Ammo, int __Ammo){
+        ammo.text = _Ammo + "/" + __Ammo;
     }
   
     // 점수 텍스트 갱신

@@ -195,10 +195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a6ef3acfbadae4a8d6e3e46d991037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoText: {fileID: 114981677178112688}
+  ammo: {fileID: 114981677178112688}
   scoreText: {fileID: 114010141499081232}
   waveText: {fileID: 114843940844466002}
-  gameoverUI: {fileID: 1067575940484460}
+  gameoverUI: {fileID: 1496761931941770}
 --- !u!1 &1092682336142274
 GameObject:
   m_ObjectHideFlags: 0
